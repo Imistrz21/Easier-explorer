@@ -16,6 +16,8 @@ Easier-Explorer is a lightweight, command-line based file explorer for Windows, 
 4. Run the `Easier-Explorer.bat` script to launch the command-line file explorer.
 5. Start exploring and managing your files using the provided commands.
 
+(or just run the installation script :) )
+
 ## Commands
 - `ls`: List files and directories in the current directory.
 - `cd`: Change directory.
