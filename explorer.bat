@@ -83,6 +83,10 @@ for /f "usebackq delims=" %%c in ("!file_txt!") do (
 )
 echo.
 pause
+timeout /t 1 >nul
+echo resizing
+mode con: cols=120 lines=30
+echo resizing
 goto menu
 :list_files
 cls
