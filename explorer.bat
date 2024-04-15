@@ -83,6 +83,8 @@ for /f "usebackq delims=" %%c in ("!file_txt!") do (
 )
 echo.
 pause
+color a
+echo Resizing
 timeout /t 1 >nul
 echo resizing
 mode con: cols=120 lines=30
