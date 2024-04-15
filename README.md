@@ -18,11 +18,11 @@ LightExplorer is a lightweight, command-line based file explorer for Windows, wr
 
 ## Commands
 - `ls`: List files and directories in the current directory.
-- `cd [directory]`: Change directory.
-- `mkdir [directory]`: Create a new directory.
-- `copy [source] [destination]`: Copy files or directories.
-- `move [source] [destination]`: Move files or directories.
-- `del [file/directory]`: Delete files or directories.
+- `cd`: Change directory.
+- `mkdir`: Create a new directory.
+- `copy`: Copy files or directories.
+- `move`: Move files or directories.
+- `del`: Delete files or directories.
 - `exit`: Exit LightExplorer.
 
 ## Contribution
