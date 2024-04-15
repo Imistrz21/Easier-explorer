@@ -28,6 +28,8 @@ echo move - Move files or directories
 echo del - Delete files or directories
 echo exit - Exit LightExplorer
 echo.
+echo if u want to exit a command press ctrl+c;
+echo.
 echo ==================================
 echo Credit to Imistrz21 on GitHub
 echo.
@@ -47,57 +49,104 @@ goto menu
 
 :list_files
 cls
+color 9
+echo Credit to Imistrz21 on GitHub
+echo ==================================
+echo Welcome to LightExplorer!
+echo.
 Echo Listing files.
 dir
+echo.
+pause
 timeout /t 1 >nul
 goto menu
 
 :change_directory
 cls
+color 9
+echo Credit to Imistrz21 on GitHub
+echo ==================================
+echo Welcome to LightExplorer!
+echo.
 echo Changing directory.
 echo.
 set /p newdir="Enter directory path: "
 cd %newdir%
+echo.
+pause
 timeout /t 1 >nul
 goto menu
 
 :create_directory
 cls
+color 9
+echo Credit to Imistrz21 on GitHub
+echo ==================================
+echo Welcome to LightExplorer!
+echo.
 echo Creating an directory.
 set /p dirname="Enter new directory name: "
 mkdir %dirname%
+echo.
+pause
 timeout /t 1 >nul
 goto menu
 
 :copy_files
 cls
+color 9
+echo Credit to Imistrz21 on GitHub
+echo ==================================
+echo Welcome to LightExplorer!
+echo.
 echo Copying files.
 set /p source="Enter source file/directory: "
 set /p destination="Enter destination directory: "
 copy %source% %destination%
+echo.
+pause
 timeout /t 1 >nul
 goto menu
 
 :move_files
 cls
+color 9
+echo Credit to Imistrz21 on GitHub
+echo ==================================
+echo Welcome to LightExplorer!
+echo.
 echo Moving files.
 set /p source="Enter source file/directory: "
 set /p destination="Enter destination directory: "
 move %source% %destination%
+echo.
+pause
 timeout /t 1 >nul
 goto menu
 
 :delete_files
 cls
+color 9
+echo Credit to Imistrz21 on GitHub
+echo ==================================
+echo Welcome to LightExplorer!
+echo.
 echo Deleting files.
 set /p target="Enter file/directory to delete: "
 del /s %target%
+echo.
+pause
 timeout /t 1 >nul
 goto menu
 
 :exit_program
 cls
-echo c
+color 9
+echo Credit to Imistrz21 on GitHub
+echo ==================================
+echo Welcome to LightExplorer!
+echo.
+echo.
 echo Exiting LightExplorer...
-timeout /t 1 >nul
+timeout /t 2 >nul
 exit
