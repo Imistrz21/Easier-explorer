@@ -1,6 +1,6 @@
-# LightExplorer
+# Easier-Explorer
 
-LightExplorer is a lightweight, command-line based file explorer for Windows, written entirely in batch script. It provides users with a familiar interface similar to Windows Explorer, allowing for easy navigation, file management, and interaction with the file system directly from the command line.
+Easier-Explorer is a lightweight, command-line based file explorer for Windows, written entirely in batch script. It provides users with a familiar interface similar to Windows Explorer, allowing for easy navigation, file management, and interaction with the file system directly from the command line.
 
 ## Features
 - Simple and intuitive command-line interface.
@@ -12,8 +12,8 @@ LightExplorer is a lightweight, command-line based file explorer for Windows, wr
 ## Usage
 1. Download or clone the repository to your Windows system.
 2. Open Command Prompt or PowerShell.
-3. Navigate to the directory where LightExplorer is located.
-4. Run the `lightexplorer.bat` script to launch the command-line file explorer.
+3. Navigate to the directory where Easier-Explorer is located.
+4. Run the `Easier-Explorer.bat` script to launch the command-line file explorer.
 5. Start exploring and managing your files using the provided commands.
 
 ## Commands
@@ -23,10 +23,10 @@ LightExplorer is a lightweight, command-line based file explorer for Windows, wr
 - `copy`: Copy files or directories.
 - `move`: Move files or directories.
 - `del`: Delete files or directories.
-- `exit`: Exit LightExplorer.
+- `exit`: Exit Easier-Explorer.
 
 ## Contribution
-Contributions to LightExplorer are welcome! If you have ideas for improvements or new features, feel free to open an issue or submit a pull request.
+Contributions to Easier-Explorer are welcome! If you have ideas for improvements or new features, feel free to open an issue or submit a pull request.
 
 ## License
 See the [LICENSE](LICENSE) file for details.
