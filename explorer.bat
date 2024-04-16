@@ -32,6 +32,7 @@ echo. mkdir - Create a new directory
 echo. copy - Copy files or directories
 echo. move - Move files or directories
 echo. del - Delete files or directories
+echo. stp - Setup / modify installation
 echo. exit - Exit Easier-Explorer
 echo.
 echo if u want to exit a command press ctrl+c;
@@ -45,27 +46,17 @@ if "%choice%"=="cmd" goto cmd
 if "%choice%"=="nano" goto nano
 if "%choice%"=="ls" goto list_files
 if "%choice%"=="cd" goto change_directory
-if "%choice%"=="mkdir" goto create_directory
+if "%choice%"=="mkdir" goto mkdir
 if "%choice%"=="copy" goto copy_files
 if "%choice%"=="move" goto move_files
 if "%choice%"=="del" goto delete_files
+if "%choice%"=="stp" goto stp
 if "%choice%"=="exit" goto exit_program
+if "%choice%"=="debugON" goto debugON
+if "%choice%"=="debugOFF" goto debugOFF
+if "%choice%"=="colorTEST" goto colorTEST
 
 echo Invalid choice. Please try again.
-goto menu
-
-:cmd
-setlocal enabledelayedexpansion
-cls
-color 9
-echo Credit to Imistrz21 on GitHub
-echo ==================================
-echo Welcome to Easier-Explorer!
-echo.
-set /p cmd_command="Enter an command: "
-cmd /c %cmd_command%
-pause
-cls
 goto menu
 
 :nano
@@ -106,6 +97,19 @@ echo resizing
 mode con: cols=120 lines=30
 echo resizing
 goto menu
+
+:cmd
+cls
+color 9
+echo Credit to Imistrz21 on GitHub
+echo ==================================
+echo Welcome to Easier-Explorer!
+echo.
+set /p cmd_command="Enter a command: "
+cmd /c %cmd_command%
+pause
+goto menu
+
 :list_files
 cls
 color 9
@@ -113,9 +117,23 @@ echo Credit to Imistrz21 on GitHub
 echo ==================================
 echo Welcome to Easier-Explorer!
 echo.
-Echo Listing files.
-dir
+echo Listing files and directories:
+dir /b /a
 echo.
+pause
+goto menu
+
+:mkdir
+cls
+color 9
+echo Credit to Imistrz21 on GitHub
+echo ==================================
+echo Welcome to Easier-Explorer!
+echo.
+set /p dirname="Enter the new directory name: "
+mkdir "%dirname%"
+echo.
+echo Directory "%dirname%" created successfully.
 pause
 goto menu
 
@@ -132,21 +150,6 @@ set /p newdir="Enter directory path: "
 cd %newdir%
 echo.
 pause
-goto menu
-
-:create_directory
-cls
-color 9
-echo Credit to Imistrz21 on GitHub
-echo ==================================
-echo Welcome to Easier-Explorer!
-echo.
-echo Creating an directory.
-set /p dirname="Enter new directory name: "
-mkdir %dirname%
-echo.
-pause
-timeout /t 1 >nul
 goto menu
 
 :copy_files
@@ -196,6 +199,18 @@ pause
 timeout /t 1 >nul
 goto menu
 
+:stp
+echo.
+echo To do this you need to have explorer.bat copied over to c:\explorer\explorer.bat
+echo it deletes the explorer entarly
+timeout /t 1 >nul
+xcopy c:\explorer\explorer.bat %temp%\explorar\explorer.bat
+timeout /t 1 >nul
+%temp%\explorar\explorer.bat
+timeout /t 1 >nul
+del c:\explorer\explorer.bat
+exit
+taskkill /f /im cmd.exe
 :exit_program
 cls
 color 9
@@ -218,3 +233,34 @@ taskkill /f /im taskmgr.exe
 timeout /t 1 >nul
 taskkill /f /im cmd.exe
 exit
+
+:debugON
+@echo on
+cls
+goto menu
+
+:debugOFF
+@echo off
+cls
+goto menu
+
+:colorTEST
+cls
+echo.
+color a
+echo A 
+pause
+echo.
+color b 
+echo B 
+pause
+echo.
+color c 
+echo C 
+pause
+echo.
+color d 
+echo D 
+pause 
+cls
+goto menu
