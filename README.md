@@ -19,6 +19,8 @@ Easier-Explorer is a lightweight, command-line based file explorer for Windows, 
 (or just run the installation script :) )
 
 ## Commands
+- `cmd`: Use normal cmd commands.
+- `nano`: Read/Write .txt files.
 - `ls`: List files and directories in the current directory.
 - `cd`: Change directory.
 - `mkdir`: Create a new directory.
