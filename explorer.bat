@@ -24,6 +24,7 @@ echo ==================================
 echo Welcome to Easier-Explorer!
 echo.
 echo Please enter a command:
+echo. cmd - write normal cmd commands
 echo. nano - read .txt files in the specified directory
 echo. ls - List files and directories
 echo. cd - Change directory
@@ -40,6 +41,7 @@ echo Credit to Imistrz21 on GitHub
 echo.
 echo Enter a command bellow: && set /p choice=""
 
+if "%choice%"=="cmd" goto cmd
 if "%choice%"=="nano" goto nano
 if "%choice%"=="ls" goto list_files
 if "%choice%"=="cd" goto change_directory
@@ -50,6 +52,20 @@ if "%choice%"=="del" goto delete_files
 if "%choice%"=="exit" goto exit_program
 
 echo Invalid choice. Please try again.
+goto menu
+
+:cmd
+setlocal enabledelayedexpansion
+cls
+color 9
+echo Credit to Imistrz21 on GitHub
+echo ==================================
+echo Welcome to Easier-Explorer!
+echo.
+set /p cmd_command="Enter an command: "
+cmd /c %cmd_command%
+pause
+cls
 goto menu
 
 :nano
