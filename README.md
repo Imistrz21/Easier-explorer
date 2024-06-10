@@ -1,6 +1,6 @@
 # Easier-Explorer
 
-Easier-Explorer is a lightweight, command-line based file explorer for Windows, written entirely in batch script. It provides users with a familiar interface similar to Windows Explorer, allowing for easy navigation, file management, and interaction with the file system directly from the command line.
+Easier-Explorer is a lightweight, command-line based file explorer for ReactOS, written entirely in batch script. It provides users with a familiar interface similar to ReactOS Explorer, allowing for easy navigation, file management, and interaction with the file system directly from the command line.
 
 ## Features
 - Simple and intuitive command-line interface.
